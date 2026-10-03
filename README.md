@@ -1,39 +1,23 @@
-#Small Number guessing Name
-import random
-secret = random.randint(1,20)
-guess = 0
-atmept = 0
-print("The Number is B/W 1 to 20")
-
-while guess != secret:
-    guess = int(input("Guess The Number:"))
-    atmept+=1
-    if guess > secret:
-        print("The Number you Choose is Very High")
-    if guess < secret:
-        print("The number you Choose is Very low")
-else:
-    print(f"You Are the Winner and you atmept {atmept}")
-
-#Small Calculator
-Operators = input("Enter An operator(+,=,/,*):")
-Number1 = float(input("Enter the Number:"))
-Number2 = float(input("Enter the Number:"))
-
-if Operators == "+":
-    Answer = Number1+Number2
-    print(Answer)
-elif Operators == "-":
-    Answer = Number1-Number2
-    print(Answer)
-elif Operators == "*":
-    Answer = Number1 * Number2
-    print(Answer)
-elif Operators == "/":
-    Answer = Number1/Number2
-    print(Answer)
-else:
-    print("The Operator is Incorrect")
+#Small time game
+import time
+for n in range(10,0,-1):
+    print(n)
+    time.sleep(0.5)
+print("Iam Doom!")
 
 
-
+#Time Loop
+import time
+from itertools import cycle
+Avengers = [
+    ("Tony Father: Tony! I build this for you", 1),
+    ("You will change the World", 1),
+    ("What is and always be will,", 1),
+    ("My Greatest Creation Is You", 1),
+    ("Tony : Iam...Iam IronMan, Snap", 1),
+]
+Tony = cycle(Avengers)
+while True:
+    a,i = next(Tony)
+    print(a)
+    time.sleep(1)
